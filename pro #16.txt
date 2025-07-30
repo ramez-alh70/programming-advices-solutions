@@ -1,0 +1,75 @@
+#include<iostream>
+#include <string>
+using namespace std;
+void ReadParameter(float &A, float &D)
+{
+	
+	cout << "Please enter rectangle side A ? " << endl;
+	cin >> A;
+
+	cout << "Please enter rectangle diagonal D ? " << endl;
+	cin >> D;
+
+
+
+}
+float  RectangleAreaBySideAndDiagonal(float A, float D)
+{
+	float Area = A*sqrt(pow(D,2)-pow(A,2));
+	return Area;
+}
+void PrintArea(float Area)
+{
+	cout << "\nRectangle Area = " << Area << endl;
+}
+int main()
+{
+	float A, B;
+	ReadParameter(A, B);
+	PrintArea(RectangleAreaBySideAndDiagonal(A, B));
+
+	return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+int main()
+{
+	float a, d;
+	cout << "Enter The A , D please" << endl;
+	cin >> a >> d;
+	float Area;
+	Area = a * sqrt(pow(d, 2) - pow(a, 2));
+	cout << "The area equal is : " << Area << endl;
+
+	return 0;
+
+
+
+	
+	
+}

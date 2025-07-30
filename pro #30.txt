@@ -1,0 +1,35 @@
+#include<iostream>
+#include <string>
+using namespace std;
+
+
+int ReadPositiveNumber(string Message)
+{
+	int Number;
+	do {
+		cout << Message << endl;
+		cin >> Number;
+
+		} while (Number < 0);
+	return Number;
+}
+int CalculateFactorial(int Number)
+{
+	int fact = 1;
+	for(int i = Number;i>=1;i--)
+	{
+		fact *= i;
+	}
+	return fact;
+}
+void PrintFactorial(int result)
+{
+	cout << "Factorial The number is :"<<result << endl;
+
+}
+int main()
+{
+	int N = ReadPositiveNumber("Enter Number?");
+	PrintFactorial(CalculateFactorial(N));
+	return 0;
+}

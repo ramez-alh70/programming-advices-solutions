@@ -1,0 +1,90 @@
+#include<iostream>
+#include <string>
+using namespace std;
+
+
+int ReadNumber()
+{
+	int Number;
+	cout << "Please enter Numebr ?" << endl;
+	cin >>  Number;
+	return Number;
+}
+void PrintRangefrom1toNUsingForLoop(int N)
+{
+	cout << "Range printed using For Statement:\n";
+
+	int counter = 1;
+	for(counter ;counter<=N;counter++)
+	{
+		cout << counter << endl;
+	}
+}
+void PrintRangeFrom1ToNUsingWhile(int N)
+{
+	cout << "Range printed using While Statement:\n";
+	int counter = 0;
+	while(counter<N)
+	{
+		counter++;
+
+		cout << counter << endl;
+	}
+}
+void PrintRangeFron1ToNUsingDo_While(int N)
+{
+	cout << "Range printed using Do_While Statement:\n";
+	int counter = 0;
+	do {
+		counter++;
+
+		cout << counter << endl;
+	} while (counter < N);
+
+}
+
+int main()
+{
+	int N = ReadNumber();
+	PrintRangefrom1toNUsingForLoop(N);
+	PrintRangeFrom1ToNUsingWhile(N);
+	PrintRangeFron1ToNUsingDo_While(N);
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+void ReadNumber(int &Number)
+{
+    cout << "Please Enter The Number?\n";
+    cin >> Number;
+}
+void PrintNumber(int Number)
+{
+    for (int i = 1; i <= Number; i++)
+    {
+        cout << i << endl;
+    }
+}
+int main()
+{
+    int Number;
+    ReadNumber(Number);
+        PrintNumber(Number);
+    return 0;
+}

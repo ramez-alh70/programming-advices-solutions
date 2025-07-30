@@ -1,0 +1,39 @@
+#include<iostream>
+#include <string>
+using namespace std;
+
+
+int ReadPositiveNumber()
+{
+	int Number;
+	cout << "Please enter Number" << endl;
+	cin >> Number;
+
+	return Number;
+}
+int ReadPower()
+{
+	int Power;
+	cout << "Please enter The Power ?" << endl;
+	cin >> Power;
+	return Power;
+}
+int PowerOfM(int Number,int M)
+{
+if(M==0)
+{
+	return 1;
+}
+int p = 1;
+for(int i =1;i<=M;i++)
+{
+	p *= Number;
+}
+return p;
+}
+int main()
+{
+	
+	cout << "The Result is :" << PowerOfM(ReadPositiveNumber(), ReadPower());
+	return 0;
+}

@@ -1,0 +1,50 @@
+#include <iostream>   
+#include <string>     
+using namespace std; 
+
+string ReadPINcode()
+{
+	string PinCode;
+	cout << "Please enter your PIN Code ?" << endl;
+	cin >> PinCode;
+
+	return PinCode;
+}
+bool Login()
+{
+	string PINCode;
+	int counter = 3 ;
+	do
+	{
+		counter--;
+
+		PINCode = ReadPINcode();
+
+		if (PINCode == "1234")
+		{
+			return 1;
+		}
+		else
+		{
+			 system("color 4f");
+			 cout << "\nWorng PIN , you have ( " << counter << " ) more tries\n";
+
+
+		}
+		
+	} while (counter >=1 && PINCode != "1234");
+	return false;
+}
+int main()
+{
+	if(Login())
+	{
+		system("color 2f");
+		cout << "Correct , Your account Palance is " << 7500 << endl;
+	}
+	else 
+	{
+		cout << "\nYour Card blocked call the bank for help . \n" << endl;
+	}
+return 0;  
+}

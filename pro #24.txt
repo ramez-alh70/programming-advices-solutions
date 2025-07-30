@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+void ReadAge(int &Age)
+{
+	cout << "Pelase Enter your Age ? " << endl;
+	cin >> Age;
+
+}
+string PrintAge(int Age)
+{
+	if (Age >= 18 && Age <= 45)
+	{
+		return "Valid Age\nThank you" ;
+
+	}
+	else
+	{
+		return "Invalid Age\nThank you" ;
+	}
+}
+int main()
+{
+	int Age;
+	ReadAge(Age);
+	cout << PrintAge(Age);
+	
+	return 0;
+}
