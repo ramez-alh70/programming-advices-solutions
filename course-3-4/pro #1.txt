@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+void PrintNameOnScreen(string Name)
+{
+	cout << "Your Name is :" << Name << endl;
+}
+
+
+int main()
+{
+	PrintNameOnScreen("RAMEZ");
+	return 0;
+
+}

@@ -1,0 +1,38 @@
+#include<iostream>
+#include <string>
+using namespace std;
+void ReadTowNumber(int &Number1, int &Number2,int &Number3)
+{
+	
+	cout << "Enter The First Number ?" << endl;
+	cin >> Number1;
+
+	cout << "Enter The Second Number ?" << endl;
+	cin >> Number2;
+
+	cout << "Enter The Second Number ?" << endl;
+	cin >> Number3;
+
+}
+int MaxOf2Numbers(int Number1, int Number2,int Number3)
+{
+	if (Number1 > Number2 && Number1 > Number3)
+		return Number1;
+	else if (Number2 > Number1 && Number2 > Number3)
+		return Number2;
+	else
+		return Number3;
+}
+void PrintResult(int Max)
+{
+	cout << "The largest of tow number is :" << Max << endl;
+}
+int main()
+{
+	int Number1, Number2,Numebr3;
+	ReadTowNumber(Number1, Number2, Numebr3);
+	PrintResult(MaxOf2Numbers(Number1, Number2, Numebr3));
+
+	return 0;
+
+}

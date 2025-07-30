@@ -1,0 +1,43 @@
+#include<iostream>
+#include <string>
+using namespace std;
+struct StInfo
+{
+	int Age;
+	bool  HasDriverLicense;
+	bool  HasRecommendation;
+};
+StInfo ReadInfo()
+{
+	StInfo Info ;
+	cout << "Please Enter Your Age" << endl;
+	cin >> Info.Age ;
+	cout << "Do you have a  Driver License ?" << endl;
+	cin >> Info.HasDriverLicense;
+	cout << "Do you have a Recommendation?" << endl;
+	cin >> Info.HasRecommendation;
+	return Info;
+}
+bool IsAccented(StInfo Info)
+{
+	if (Info.HasRecommendation) {
+		return true;
+	}
+	else
+	{
+		return (Info.Age > 21 && Info.HasDriverLicense);
+	}
+};
+void PrintResult(StInfo Info)
+{
+	if (IsAccented(Info))
+		cout << "\nHierd";
+	else
+		cout << "\nRejected";
+}
+int main()
+{
+	PrintResult(ReadInfo());
+	return 0;
+
+}

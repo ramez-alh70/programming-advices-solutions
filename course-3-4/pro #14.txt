@@ -1,0 +1,39 @@
+#include<iostream>
+#include <string>
+using namespace std;
+void ReadTowNumber(int &Number1, int &Number2)
+{
+	
+	cout << "Enter The First Number ?" << endl;
+	cin >> Number1;
+
+	cout << "Enter The Second Number ?" << endl;
+	cin >> Number2;
+
+
+
+}
+void Swaping2Numbers(int &A, int &B)
+{
+	int temp;
+	temp = A;
+	A = B;
+	B = temp;
+}
+void PrintNumbers(int Number1,int Number2)
+{
+	cout << "\nNumber1 = " << Number1 << endl;
+	cout <<"\nNumber2  = " << Number2 << endl;
+}
+int main()
+{
+	int Number1, Number2;
+	ReadTowNumber(Number1, Number2);
+	PrintNumbers(Number1, Number2);
+	Swaping2Numbers(Number1, Number2);
+	cout << "The Number After the Swap is : ";
+	PrintNumbers(Number1,Number2);
+
+	return 0;
+
+}

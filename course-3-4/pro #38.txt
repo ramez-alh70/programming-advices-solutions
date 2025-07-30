@@ -1,0 +1,53 @@
+#include<iostream>
+#include<cstring>
+#include<string>
+using namespace std;
+
+enum enPrimeNotPrime {Prime =1 , NotPrime=2};
+int ReadPositiveNumber(string Message)
+{
+	int Number;
+	do
+	{
+		cout << Message<< endl;
+		cin >> Number;
+
+	} while (Number <= 0);
+	return Number;
+}
+enPrimeNotPrime CheckPrime(int Number)
+{
+	if (Number < 2)
+		return enPrimeNotPrime::NotPrime;
+	int M = round(Number / 2);
+	for(int counter=2;counter<=M;counter++)
+	{
+		if (Number % counter == 0)
+			return enPrimeNotPrime::NotPrime;
+	}
+	return enPrimeNotPrime::Prime;
+
+}
+void PrintNumberType(int Number)
+{
+	switch (CheckPrime(Number))
+	{
+	case enPrimeNotPrime::Prime:
+		cout << "The Number is Prime\n";
+		break;
+		case enPrimeNotPrime::NotPrime:
+		cout << "The Number is Not Prime \n";
+		break;
+	}
+
+
+}
+
+
+int main()
+{
+	PrintNumberType(ReadPositiveNumber("Please enter a Positive Number ?"));
+
+	return 0;
+
+}

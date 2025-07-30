@@ -1,0 +1,30 @@
+#include <iostream>   
+#include <string>     
+
+using namespace std; 
+float ReadPositiveNumber(string Message)
+{
+	float Number;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+		
+	} while (Number <= 0);
+	return Number;
+}
+float CalculateNumberOfMonth(int LoanAmount, int MonthlyPayment)
+{
+    
+    return (float)LoanAmount /MonthlyPayment;
+}
+
+int main()
+{
+	int LoanAmount = ReadPositiveNumber("Please enter your Loan Amount ");
+	int MonthlyPayment = ReadPositiveNumber("Please enter your Mounthly Paymet");
+
+ 
+   cout<<"\nNumber of Month Pay is  :" <<CalculateNumberOfMonth(LoanAmount, MonthlyPayment);
+return 0;  
+}
